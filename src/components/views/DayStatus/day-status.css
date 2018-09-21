@@ -1,0 +1,12 @@
+#day-status {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#day-status div {
+  width: 100%;
+  padding: .5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #999;
+}

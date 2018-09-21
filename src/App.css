@@ -1,0 +1,30 @@
+body {
+  font-family: Muli, Helvetica, Arial,sans-serif;
+  color: #35495e;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+}
+
+#root {
+  flex-basis: 1000px;
+}
+
+.divider {
+  margin: 1rem auto;
+  border-top: 1px solid #d9dede;
+  width: 90%;
+  text-align: center;
+}
+
+.divider::after {
+  content: "%%";
+  display: inline-block;
+  padding: 0 10px;
+  position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  color: #849493;
+  font-size: 1rem;
+}
