@@ -1,5 +1,12 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: Muli, Helvetica, Arial,sans-serif;
+  color: #35495e;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #eee;
+}
+
+#root {
+  flex-basis: 1000px;
 }
