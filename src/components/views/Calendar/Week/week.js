@@ -3,6 +3,16 @@ import moment from 'moment';
 
 export default class Week extends Component {
 
+  onShowForm = (day, event) => {
+    const payload = { 
+      screenX: event.screenX, 
+      screenY: event.screenY,
+      current: day.format('dddd, MMMM Do')
+    };
+    this.props.onShowForm(payload);
+  }
+
+
   formatDay = (day) => day.format('D');
   
   byClass = (day) => {
@@ -19,7 +29,9 @@ export default class Week extends Component {
     return (
       <div className="calendar-week">
         {this.props.week.map((day, i) => 
-          (<div className={this.byClass(day)} key={i}>
+          (<div className={this.byClass(day)} key={i}
+            onClick={this.onShowForm.bind(this, day)}
+          >
             <div>{this.formatDay(day)}</div>
             <ul className="event-list"></ul>
           </div>)

@@ -1,0 +1,77 @@
+#event-form {
+  display: none;
+  box-shadow: 0 2px 4px #ddd;
+  position: fixed;
+  width: 300px;
+  transform: translate(-50%,-100%);
+  z-index: 10;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  flex-direction: column;
+  align-content: space-between;
+}
+#event-form > * {
+  width: 100%;
+}
+
+#event-form.active {
+  display: flex;
+}
+
+#event-form h4 {
+  margin: 0 0 .75rem;
+  color: #999;
+  font-weight: 400;
+  font-size: 1.15rem;
+}
+
+#event-form p {
+  font-size: .85rem;
+  margin: 0 0 .85rem;
+}
+
+#event-form .text {
+  margin-bottom: .75rem;
+}
+
+#event-form .text input {
+  width: calc(100% - .7rem);
+  padding: .3rem;
+  font-size: .75rem;
+  border-radius: 5px;
+}
+
+#event-form .buttons {
+  text-align: right;
+}
+
+#event-form .buttons button {
+  padding: .5rem;
+  font-size: .8rem;
+  background-color: #35495e;
+  border: 1px solid #2c3c4e;
+  font-weight: 700;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#event-form .buttons button:hover {
+  background-color: #5f6265;
+}
+
+#closed-button {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
+  background-color: #fff;
+  position: absolute;
+  border: none;
+  width: 20px;
+  font-weight: 700;
+  color: #666;
+  right: .6rem;
+  top: .6rem;
+  cursor: pointer;
+}

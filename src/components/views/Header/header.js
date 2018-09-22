@@ -5,9 +5,6 @@ import * as actionCreators from '../../redux/actions';
 import './header.css';
 
 class Header extends Component {
-  componentDidMount() {
-    console.log(this.props.current);
-  }
 
   formatDate = () => {
     const { month, year } = this.props.current;
