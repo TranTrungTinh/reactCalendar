@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './calendar.css';
 
-export default class Calendar extends Component {
+import Week from './Week/week';
+
+class Calendar extends Component {
   render() {
     return (
       <div id="calendar">
-        <div className="calendar-week">
+        {this.props.weeks.map((e, i) => <Week key={i} week={e}/>)}
+        {/* <div className="calendar-week">
           <div className="day not-current-month past">
             <div>27</div>
             <ul className="event-list"></ul>
@@ -96,9 +100,13 @@ export default class Calendar extends Component {
             <div>2</div>
             <ul className="event-list"></ul>
           </div>
-        </div>
+        </div> */}
 
       </div>
     )
   }
 }
+const mapStateToProps = state => ({
+  weeks: state.current.weeks
+})
+export default connect(mapStateToProps)(Calendar);

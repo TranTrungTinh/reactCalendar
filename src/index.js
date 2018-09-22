@@ -3,5 +3,10 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// redux
+import { Provider } from 'react-redux';
+import store from './components/redux/store';
+const rootDiv = document.getElementById('root');
+
+ReactDOM.render(<Provider store={store}><App /></Provider>, rootDiv);
 registerServiceWorker();
